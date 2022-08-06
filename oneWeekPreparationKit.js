@@ -44,3 +44,27 @@ function miniMaxSum(arr) {
     
     console.log(String(sum+min)+" "+String(sum+max))
 }
+
+
+/// problem 3 time conversion
+function timeConversion(s) {
+    // Write your code here
+    let hour = s.slice(0,2)
+    let time = s.slice(2,8)
+    let isAM = s.slice(8,10) 
+    
+    
+    if(isAM == "PM" && hour!="12")
+    {
+        hour = Number(hour)+12;  
+        console.log("hell")
+    }
+    else if(isAM == "AM" && hour == "12")
+    {
+        hour = "00"
+    }
+    time = hour+time
+    
+    
+    return time
+}
