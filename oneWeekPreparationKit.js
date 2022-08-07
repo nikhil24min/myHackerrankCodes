@@ -93,3 +93,30 @@ function lonelyinteger(a) {
 }
 
 
+///////// DAY2 problem 2
+function diagonalDifference(arr) {
+    // Write your code here
+    let i = 0;
+    let j = 0;
+    let len = arr.length;
+    let sum1 = 0;
+    let sum2 = 0;
+    j = len-1;
+    for(i=0; i<len; i++)
+    {
+        sum1 += arr[i][i];
+        sum2 += arr[i][j];
+        j--;
+    }
+    
+    console.log(sum1, sum2)
+    
+    let result = sum1-sum2;
+    
+    console.log(result)
+    result = result * result;
+    console.log(result)
+    
+    return Math.sqrt(result);
+    
+}
