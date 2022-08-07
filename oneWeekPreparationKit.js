@@ -120,3 +120,20 @@ function diagonalDifference(arr) {
     return Math.sqrt(result);
     
 }
+
+function countingSort(arr) {
+    // Write your code here
+    
+    let len = arr.length;
+    let result = new Array(len);
+    let i = 0;
+    for(i=0; i<100; i++) result[i]=0;
+    let temp = 0;
+    
+    for(i=0; i<len; i++)
+    {   
+        temp = arr[i]
+        result[temp]++;
+    }
+    return result;
+}
