@@ -68,3 +68,28 @@ function timeConversion(s) {
     
     return time
 }
+
+//// day 2 problem one lonely integer
+function lonelyinteger(a) {
+    // Write your code here
+    let temp ;
+    let pos;
+    while(a.length>0)
+    {   
+        temp = a.pop();
+        
+        pos = a.indexOf(temp)
+        if(pos!=-1)
+        {
+           a.splice(pos,1) 
+          
+        }
+        else
+        {   
+           return temp;
+        }
+        
+    }
+}
+
+
